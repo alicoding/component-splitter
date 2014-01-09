@@ -1,0 +1,64 @@
+<polymer-element name="ceci-splitter" extends="ceci-element">
+  <template>
+    <link rel="stylesheet" href="component.css"></link>
+    <div class="splitter">
+    </div>
+    <shadow></shadow>
+    <script type="text/json" id="ceci-definition">
+      {
+        "tags": ["component-splitter", "splitter"],
+        "thumbnail": "./thumbnail.png",
+        "broadcasts": {
+          "splitter1": {
+            "label": "splitter1",
+            "description": "repeats input",
+            "default": true
+          },
+          "splitter2": {
+            "label": "splitter2",
+            "description": "repeats input"
+          },
+          "splitter3": {
+            "label": "splitter3",
+            "description": "repeats input"
+          },
+          "splitter4": {
+            "label": "splitter4",
+            "description": "repeats input"
+          },
+          "splitter5": {
+            "label": "splitter5",
+            "description": "repeats input"
+          },
+          "splitter6": {
+            "label": "splitter6",
+            "description": "repeats input"
+          }
+        },
+        "listeners": {
+          "input": {
+            "description": "input 1",
+            "label": "Input",
+            "default": true
+          }
+        },
+        "attributes": {}
+      }
+    </script>
+  </template>
+  <script>
+    Polymer('ceci-splitter', {
+      ready: function () {
+        this.super();
+      },
+      input: function(val) {
+        this.broadcast("splitter1", val );
+        this.broadcast("splitter2", val );
+        this.broadcast("splitter3", val );
+        this.broadcast("splitter4", val );
+        this.broadcast("splitter5", val );
+        this.broadcast("splitter6", val );
+      }
+    });
+  </script>
+</polymer-element>
